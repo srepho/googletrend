@@ -116,9 +116,9 @@ gettrend<-function(keyword="boston", geo=NULL, year=NULL,
   if(!is.null(category) ) 
   {
     message( sprintf("|- ** GOOGLE CATEGORY: %s ** -|", category )) 
-    trendsURL <- sprintf('http://www.google.com/trends/trendsReport?cat=%s&q=%s&content=1&export=1', category, keyword)    
+    trendsURL <- sprintf('http://www.google.com/trends/trendsReport?cat=%s&q=%s&gprop=youtube&content=1&export=1', category, keyword)    
   }
-    else trendsURL <- sprintf('http://www.google.com/trends/trendsReport?q=%s&content=1&export=1', keyword)
+    else trendsURL <- sprintf('http://www.google.com/trends/trendsReport?q=%s&gprop=youtube&content=1&export=1', keyword)
   
   # handling customizing query  
   if( !is.null(geo))
